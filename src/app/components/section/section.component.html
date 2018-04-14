@@ -1,0 +1,16 @@
+<div class="card-header border">
+    {{formSection.header}}
+</div>
+<div class="card-body">
+    <div class="row">
+      <div [class]="'col col-'+controlWidth" *ngFor="let control of formSection.items">
+          <ng-container [ngSwitch]="control.type">
+            <app-input-text      *ngSwitchCase="'input'"    [formItem]="control"></app-input-text>
+            <app-input-currency  *ngSwitchCase="'currency'" [formItem]="control" ></app-input-currency>
+          </ng-container>
+      </div>
+    </div>
+</div>
+
+
+

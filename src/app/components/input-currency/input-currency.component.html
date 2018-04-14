@@ -1,0 +1,15 @@
+  <label>{{formItem.label}}</label>
+
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">{{currencyCode}}</div>
+    </div>
+    <input type="number" class="form-control"
+      [placeholder]="formItem.label"
+      [(ngModel)]="formItem.value"
+      [step]="numberStep"
+      (keyup)="roundValueToPrecision()"
+      >
+  </div>
+  <!-- {{formItem | json}} -->
+
