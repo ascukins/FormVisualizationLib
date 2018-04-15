@@ -12,7 +12,6 @@ export class InputTextComponent implements OnChanges {
 
   constructor() { }
 
-  ngOnChanges() {
-  }
+  ngOnChanges() {  }
 
 }

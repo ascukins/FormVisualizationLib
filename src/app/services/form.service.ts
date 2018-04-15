@@ -64,7 +64,7 @@ export class FormService {
                 {
                   'type': 'input',
                   'label': 'First text',
-                  'value': 'Acme - 120asdfasdfample)',
+                  'value': 'First value :)',
                   'required': true
                 },
                 {
@@ -75,7 +75,7 @@ export class FormService {
                 },
                 {
                   'type': 'currency',
-                  'label': ' zero precision',
+                  'label': 'Zero precision',
                   'value': 0,
                   'symbol': 'EUR'
                 },

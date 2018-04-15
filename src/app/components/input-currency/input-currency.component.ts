@@ -11,28 +11,24 @@ export class InputCurrencyComponent implements OnChanges {
 
   @Input() formItem: FormItem;
 
-  currencyCode = '€';
-  numberStep = 1;
+  currencyCode: string;
+  numberStep: number;
 
   constructor() { }
 
   roundValueToPrecision() {
+    if ( this.formItem.value ){
     this.formItem.value =
-          Math.round( this.formItem.value * Math.pow(10, this.formItem.precision))
-                                  / Math.pow(10, this.formItem.precision);
+      Math.floor( this.formItem.value * Math.pow(10, this.formItem.precision))
+          / Math.pow(10, this.formItem.precision);
+    }
   }
-
 
   ngOnChanges() {
     if (!this.formItem.precision) {
       this.formItem.precision = 0;
     }
-
-    if (this.formItem.precision) {
-      this.numberStep = Math.pow(10, -this.formItem.precision);
-    } else {
-      this.numberStep = 1;
-    }
+    this.numberStep = Math.pow(10, -this.formItem.precision);
 
     if ( !this.formItem.symbol) {
       this.currencyCode = '';
