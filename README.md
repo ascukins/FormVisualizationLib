@@ -1,27 +1,21 @@
-# AsFormVisLib
+# A.S. Form Visualization Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+Turns Json into screen form.
 
-## Development server
+## Live demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Live demo](https://ascukins.github.io/)
 
-## Code scaffolding
+## Json source
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Json source](https://ascukins.github.io/assets/data.json)
 
-## Build
+## Notes on currency input
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+This is version with currency input made as html5 input number.
 
-## Running unit tests
+The same functionality can be achieved with angular Directive/Component and input text.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Each approach has it's pros and cons, so I'm not sure which one to choose. 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+It depends on versions of users' browsers.

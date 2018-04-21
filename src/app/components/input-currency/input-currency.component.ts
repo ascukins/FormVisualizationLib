@@ -17,9 +17,9 @@ export class InputCurrencyComponent implements OnChanges {
   constructor() { }
 
   roundValueToPrecision() {
-    if ( this.formItem.value ){
-    this.formItem.value =
-      Math.floor( this.formItem.value * Math.pow(10, this.formItem.precision))
+    if ( this.formItem.value ) {
+      this.formItem.value =
+        Math.floor( this.formItem.value * Math.pow(10, this.formItem.precision))
           / Math.pow(10, this.formItem.precision);
     }
   }
