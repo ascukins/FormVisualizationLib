@@ -1,21 +1,50 @@
-<div style="text-align:center; color:darkcyan">Test data: https://ascukins.github.io/assets/data.json</div>
-<div class="card border rounded" style="width: 700px; margin: 0 auto; padding-top:1px">
+<div style="text-align:center; color:darkcyan">
+  Test data: https://ascukins.github.io/form-lib/assets/data.json
+</div>
+<div
+  class="card border rounded"
+  style="width: 700px; margin: 0 auto; padding-top:1px"
+>
   <div class="row">
-    <div class="col col-3" >
-      <button type="button" class="btn btn-outline-primary border-0" (click)="formService.resetJson()">Reset JSON</button>
+    <div class="col col-3">
+      <button
+        style="margin-top: 1px; margin-left: 2px;"
+        type="button"
+        class="btn btn-outline-primary border-0"
+        (click)="formService.resetJson()"
+      >
+        Reset JSON
+      </button>
     </div>
 
-    <div class="col" >
+    <div class="col">
       <div class="input-group">
-        <input type="text" class="form-control"  placeholder="http://www.site.com/path/file.json" [(ngModel)]="formService.jsonPath">
-        <button type="button" class="btn  btn-outline-primary border-0" (click)="formService.loadJson()">Load JSON</button>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="http://www.site.com/path/file.json"
+          [(ngModel)]="formService.jsonPath"
+        />
+        <button
+          style="margin-right: 1px;"
+          type="button"
+          class="btn  btn-outline-primary border-0"
+          (click)="formService.loadJson()"
+        >
+          Load JSON
+        </button>
       </div>
     </div>
-
-
   </div>
 </div>
-<br>
-<app-form [formWidget]="formService.widgets.widgets[0]" *ngIf="formService.widgets && formService.widgets.widgets && formService.widgets.widgets.length"></app-form>
+<br />
+<app-form
+  [formWidget]="formService.widgets.widgets[0]"
+  *ngIf="
+    formService.widgets &&
+    formService.widgets.widgets &&
+    formService.widgets.widgets.length
+  "
+></app-form>
 
 <!-- <pre style="color:darkcyan">JSON source: {{formService.widgets | json}}</pre> -->

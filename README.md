@@ -1,21 +1,17 @@
-# A.S. Form Visualization Library
+# Form Visualization Library prototype
 
-Turns Json into screen form.
+Turns JSON into screen form.
 
-## Live demo
+### Live demo
 
-[Live demo](https://ascukins.github.io/)
+https://ascukins.github.io/form-lib/
 
-## Json source
+### JSON source
 
-[Json source](https://ascukins.github.io/assets/data.json)
+https://ascukins.github.io/form-lib/assets/data.json
 
-## Notes on currency input
+### Notes on currency input
 
 This is version with currency input made as html5 input number.
 
 The same functionality can be achieved with angular Directive/Component and input text.
-
-Each approach has it's pros and cons, so I'm not sure which one to choose. 
-
-It depends on versions of users' browsers.

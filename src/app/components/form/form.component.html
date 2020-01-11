@@ -1,26 +1,28 @@
-
 <div class="card border rounded" style="width: 700px; margin: 0 auto;">
-
-    <div class="row" style="margin-top: 0.5em">
-
-      <div class="col col-sm-2"  style="padding-left: 1.5em">
-        <button type="button" class="btn btn-outline-danger border-0">Cancel</button>
-      </div>
-      <div class="col text-center" style="padding: 0.3em">
-    <h5 class="card-title">{{formWidget.name}}</h5>
-      </div>
-      <div class="col  col-sm-2 text-right" style="padding-right: 1.5em">
-        <button type="button" class="btn btn-outline-success border-0">Save</button>
-      </div>
-
+  <div class="row" style="margin-top: 0.5em">
+    <div class="col col-sm-2" style="padding-left: 1.5em">
+      <button type="button" class="btn btn-outline-danger border-0">
+        Cancel
+      </button>
     </div>
+    <div class="col text-center" style="padding: 0.3em">
+      <h5 class="card-title">{{ formWidget.name }}</h5>
+    </div>
+    <div class="col  col-sm-2 text-right" style="padding-right: 1.5em">
+      <button type="button" class="btn btn-outline-success border-0">
+        Save
+      </button>
+    </div>
+  </div>
 
   <!-- actual form contents go here -->
   <ng-container *ngFor="let section of formWidget.items">
-      <ng-container *ngIf="section.type==='section'">
-        <app-section [formSection]="section"></app-section>
-      </ng-container>
+    <ng-container *ngIf="section.type === 'section'">
+      <app-section [formSection]="section"></app-section>
     </ng-container>
-
+  </ng-container>
 </div>
-<!-- {{formWidget | json}} -->
+
+<pre
+  >{{ formWidget | json }}
+</pre>
